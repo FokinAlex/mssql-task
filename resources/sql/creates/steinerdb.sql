@@ -27,8 +27,7 @@ create table results (
      id                      integer identity primary key,
      case_id                 integer,
      algorithm_id            integer,
-     steiner_tree            numeric (20, 5),
-     ms_time                 integer,
+     steiner_tree            numeric (20, 5)
      constraint results_case_fk      foreign key (case_id)      references cases (id),
      constraint results_algorithm_fk foreign key (algorithm_id) references algorithms (id)
 );

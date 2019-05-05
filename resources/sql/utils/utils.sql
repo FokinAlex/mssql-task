@@ -41,3 +41,24 @@ values ('Test', 'Test Algorithm - without any results');
 
 insert into results (case_id, algorithm_id, steiner_tree, ms_time)
 values (1, null, 0.1337, null);
+
+insert into cases (minimum_spanning_tree, minimum_steiner_tree, count_of_points)
+values (0, 0, 0);
+
+select * from algorithms;
+
+update results
+    set algorithm_id = 4
+    where algorithm_id = 5;
+
+drop function getBestAlgorithmForCaseById;
+drop function getEachAlgorithmAverageSteinerTreesForCaseById;
+drop trigger update_count_of_case_points_trigger;
+drop trigger update_results_trigger;
+drop function check_points;
+close check_points_cursor;
+deallocate check_points_cursor;
+
+drop procedure CLR;
+drop assembly CLR;
+
