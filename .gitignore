@@ -1,0 +1,6 @@
+# IDE stuff
+**/.idea/**
+
+# Log-files
+*.log
+hs_err_pid*
